@@ -1,3 +1,10 @@
+/*
+Sources:
+https://stackoverflow.com/questions/9206091/going-through-a-text-file-line-by-line-in-c
+https://stackoverflow.com/questions/42393117/c-print-lines-from-file-with-getline
+https://stackoverflow.com/questions/19813949/how-to-read-a-line-from-a-file-in-c
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

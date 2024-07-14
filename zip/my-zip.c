@@ -1,3 +1,10 @@
+/*
+Sources:
+https://www.geeksforgeeks.org/text-file-compression-and-decompression-using-huffman-coding/
+https://www.codeproject.com/Questions/5320638/File-compression-and-decompression-and-C
+https://stackoverflow.com/questions/58191611/compression-and-decompression
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

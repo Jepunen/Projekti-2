@@ -1,3 +1,9 @@
+/*
+Sources:
+https://stackoverflow.com/questions/3501338/c-read-file-line-by-line
+https://www.tutorialspoint.com/cprogramming/index.htm
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
