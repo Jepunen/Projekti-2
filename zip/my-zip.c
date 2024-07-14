@@ -10,7 +10,7 @@ void compress( FILE *input ) {
         return; // Empty file
     }
 
-    count = 1;
+    count = 1; // First char
     while ( fread(&curr, sizeof(char), 1, input) == 1 ) {
         if ( curr == prev ) {
             count++;
@@ -28,11 +28,13 @@ void compress( FILE *input ) {
 
 int main( int argc, char *argv[] ) {
 
+    // Wrong amount of args
     if ( argc != 2 ) {
         printf("my-zip: file1 [file2 ...]\n");
         return 1;
     }
 
+    // rb for all kinds of files
     FILE *input = fopen(argv[1], "rb");
 
     if ( !input ) {

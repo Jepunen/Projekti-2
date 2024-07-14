@@ -7,6 +7,7 @@ void grep_output(FILE *file, const char *search_term) {
     size_t size = 0;
     ssize_t len = 0;
 
+    // Loop through lines and filter out non matching lines
     while ( (len = getline(&str, &size, file)) != -1 ) {
         if ( strstr(str, search_term) == NULL ) {
             continue;
@@ -18,6 +19,7 @@ void grep_output(FILE *file, const char *search_term) {
 
 int main(int argc, char *argv[]) {
 
+    // Too few arguments
     if ( argc < 2 ) {
         printf("my-grep: searchterm [file...]\n");
         return 1;
@@ -25,9 +27,11 @@ int main(int argc, char *argv[]) {
 
     const char *search_term = argv[1];
 
+    // No file provided, read from terminal
     if ( argc == 2 ) {
         grep_output(stdin, search_term);
 
+    // File(s) provided, read from them
     } else {
         for ( int i = 2; i < argc; i++ ) {
             FILE *file = fopen(argv[i], "r");

@@ -3,10 +3,12 @@
 
 int main(int argc, char *argv[]) {
 
+    // No files provided
     if ( argc < 2 ) {
         return 0;
     }
 
+    // Loop through all provided files
     for ( int i = 1; i < argc; i++ ) {
         FILE *file = fopen(argv[i], "r");
         if ( file == NULL ) {

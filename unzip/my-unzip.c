@@ -7,7 +7,7 @@ void decompress( FILE *input ) {
     char c;
 
     while ( fread(&count, sizeof(int), 1, input) == 1 ) {
-        fread(&c, sizeof(c), 1, input);
+        fread(&c, sizeof(char), 1, input);
         for ( int i = 0; i < count; i++ ) {
             printf("%c", c);
         }
